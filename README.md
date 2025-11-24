@@ -12,7 +12,7 @@ public class Formulario extends JFrame {
     // Datos personales
     private JTextField campoNombre;
     private JTextField campoEdad;
-    private JTextField campoCorreo; // <-- NUEVO CAMPO
+    private JTextField campoCorreo; 
 
     // Datos de entidad
     private JComboBox<String> comboEntidad;
@@ -51,7 +51,7 @@ public class Formulario extends JFrame {
         campoEdad = new JTextField();
         panelPersonales.add(campoEdad);
 
-        panelPersonales.add(new JLabel("Correo:")); // <---- NUEVO
+        panelPersonales.add(new JLabel("Correo:")); 
         campoCorreo = new JTextField();
         panelPersonales.add(campoCorreo);
 
@@ -126,7 +126,7 @@ public class Formulario extends JFrame {
         try {
             String nombre = campoNombre.getText();
             String edad = campoEdad.getText();
-            String correo = campoCorreo.getText(); // <--- NUEVO
+            String correo = campoCorreo.getText();
 
             String entidad = comboEntidad.getSelectedItem().toString();
             double valorEvento = Double.parseDouble(campoCapital.getText());
@@ -153,7 +153,7 @@ public class Formulario extends JFrame {
             sb.append("========= DATOS PERSONALES =========\n");
             sb.append("Nombre: ").append(nombre).append("\n");
             sb.append("Edad: ").append(edad).append("\n");
-            sb.append("Correo: ").append(correo).append("\n\n"); // <--- NUEVO
+            sb.append("Correo: ").append(correo).append("\n\n");
 
             sb.append("========= ENTIDAD =========\n");
             sb.append("Entidad seleccionada: ").append(entidad).append("\n");
@@ -205,7 +205,7 @@ public class Formulario extends JFrame {
     private void limpiarCampos() {
         campoNombre.setText("");
         campoEdad.setText("");
-        campoCorreo.setText(""); // <--- NUEVO
+        campoCorreo.setText("");
         campoCapital.setText("");
         campoPoblacion.setText("");
         campoEventos.setText("");
