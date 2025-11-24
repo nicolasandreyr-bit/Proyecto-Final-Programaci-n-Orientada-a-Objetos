@@ -1,6 +1,6 @@
-# Proyecto-Final-Programacion-Orientada-a-Objetos
+# Proyecto Final Programacion Orientada a Objetos
 
-# FORMULARIO_DE_PROYECTOS_BANCO_DE_PROYECTOS_-_EVENTOS
+# FORMULARIO DE PROYECTOS BANCO DE PROYECTOS - EVENTOS
 
     import javax.swing.*;
     import java.awt.*;
