@@ -1,5 +1,7 @@
 # Proyecto-Final-Programacion-Orientada-a-Objetos
 
+# FORMULARIO_DE_PROYECTOS_BANCO_DE_PROYECTOS_-_EVENTOS
+
     import javax.swing.*;
     import java.awt.*;
 
@@ -112,8 +114,7 @@
         setLocationRelativeTo(null);
         setVisible(true);
     }
-* Procesa los datos ingresados por el usuario, realiza las validaciones
-* y muestra los resultados en la interfaz.
+* Procesa los datos ingresados por el usuario, realiza las validaciones y muestra los resultados en la interfaz.
 
      
         private void procesarDatos() {
@@ -174,7 +175,6 @@
         }
 
      * Obtiene las sugerencias personalizadas para cada entidad.
-     * 
      * @param entidad El nombre de la entidad seleccionada.
      * @return Las sugerencias correspondientes a la entidad.
 
