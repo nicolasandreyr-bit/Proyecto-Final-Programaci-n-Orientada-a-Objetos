@@ -3,13 +3,10 @@
     import javax.swing.*;
     import java.awt.*;
 
-/**
  * Clase que representa un formulario para la evaluación de propuestas
  * para diferentes entidades, recopilando datos personales y de entidad.
- */
 
-
-public class Formulario extends JFrame {
+       public class Formulario extends JFrame {
 
 // Datos personales
 
@@ -26,11 +23,8 @@ public class Formulario extends JFrame {
 
     private JTextArea salida;
 
-/**
 * Constructor que inicializa la ventana del formulario, configurando
 * los campos y botones.
-
-*/
 
 // Presupuesto fijo para todas las entidades
 
@@ -43,9 +37,8 @@ public class Formulario extends JFrame {
 
         JPanel panelSuperior = new JPanel(new GridLayout(3, 1, 15, 15));
 
-// =======================================
-// SECCIÓN 1: DATOS PERSONALES (ACTUALIZADA)
-// =======================================
+// SECCIÓN 1: DATOS PERSONALES
+
 
         JPanel panelPersonales = new JPanel(new GridLayout(3, 2, 10, 10));
         panelPersonales.setBorder(BorderFactory.createTitledBorder("Datos Personales"));
@@ -62,9 +55,7 @@ public class Formulario extends JFrame {
         campoCorreo = new JTextField();
         panelPersonales.add(campoCorreo);
 
-// =======================================
 // SECCIÓN 2: ENTIDAD
-// =======================================
 
         JPanel panelEntidad = new JPanel(new GridLayout(4, 2, 10, 10));
         panelEntidad.setBorder(BorderFactory.createTitledBorder("Entidad Elegible"));
@@ -92,9 +83,7 @@ public class Formulario extends JFrame {
 
         add(panelSuperior, BorderLayout.NORTH);
 
-// =======================================
 // BOTONES
-// =======================================
 
         JPanel panelBotones = new JPanel();
         JButton botonProcesar = new JButton("Procesar");
@@ -107,9 +96,7 @@ public class Formulario extends JFrame {
 
         add(panelBotones, BorderLayout.CENTER);
 
-// =======================================
 // SALIDA
-// =======================================
 
         salida = new JTextArea(15, 50);
         salida.setEditable(false);
@@ -125,16 +112,15 @@ public class Formulario extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
-   /**
-     * Procesa los datos ingresados por el usuario, realiza las validaciones
-     * y muestra los resultados en la interfaz.
-     */
+* Procesa los datos ingresados por el usuario, realiza las validaciones
+* y muestra los resultados en la interfaz.
+
      
-    private void procesarDatos() {
-        try {
-            String nombre = campoNombre.getText();
-            String edad = campoEdad.getText();
-            String correo = campoCorreo.getText();
+        private void procesarDatos() {
+            try {
+              String nombre = campoNombre.getText();
+                String edad = campoEdad.getText();
+                String correo = campoCorreo.getText();
 
             String entidad = comboEntidad.getSelectedItem().toString();
             double valorEvento = Double.parseDouble(campoCapital.getText());
@@ -185,17 +171,18 @@ public class Formulario extends JFrame {
         } catch (Exception ex) {
             salida.setText("Error: Verifica los datos ingresados.\n\n" + ex.getMessage());
         }
-    }
+        }
 
-/**
      * Obtiene las sugerencias personalizadas para cada entidad.
      * 
      * @param entidad El nombre de la entidad seleccionada.
      * @return Las sugerencias correspondientes a la entidad.
-*/
+
+
+
     
-    private String obtenerSugerencia(String entidad) {
-        switch (entidad) {
+            private String obtenerSugerencia(String entidad) {
+            switch (entidad) {
             case "SENA":
                 return "- Enfocar la propuesta en formación técnica.\n- Priorizar programas laborales.";
             case "Bancolombia":
@@ -204,29 +191,26 @@ public class Formulario extends JFrame {
                 return "- Enfocar en comercio digital.\n- Sugerir mejoras logísticas.";
             default:
                 return "Sin sugerencias disponibles.";
-        }
-    }
+            }
+            }
 
-/**
-     * Limpia todos los campos del formulario.
-     */
+
+* Limpia todos los campos del formulario.
     
-    private void limpiarCampos() {
-        campoNombre.setText("");
-        campoEdad.setText("");
-        campoCorreo.setText("");
-        campoCapital.setText("");
-        campoPoblacion.setText("");
-        campoEventos.setText("");
-        salida.setText("");
-    }
-/**
-     * Método principal que ejecuta la aplicación.
-     * 
-     * @param args Argumentos de línea de comandos.
-         */
+        private void limpiarCampos() {
+            campoNombre.setText("");
+            campoEdad.setText("");
+            campoCorreo.setText("");
+            campoCapital.setText("");
+            campoPoblacion.setText("");
+            campoEventos.setText("");
+            salida.setText("");
+        }
+* Método principal que ejecuta la aplicación.
+* @param args Argumentos de línea de comandos.
+
     
-    public static void main(String[] args) {
-        new Formulario();
-    }
-}
+        public static void main(String[] args) {
+            new Formulario();
+            }
+        }
