@@ -1,20 +1,24 @@
 # Proyecto-Final-Programacion-Orientada-a-Objetos
-import javax.swing.*;
-import java.awt.*;
+
+    import javax.swing.*;
+    import java.awt.*;
 
 /**
  * Clase que representa un formulario para la evaluación de propuestas
  * para diferentes entidades, recopilando datos personales y de entidad.
  */
 
+
 public class Formulario extends JFrame {
 
-    // Datos personales
+// Datos personales
+
     private JTextField campoNombre;
     private JTextField campoEdad;
     private JTextField campoCorreo; 
 
-    // Datos de entidad
+// Datos de entidad
+
     private JComboBox<String> comboEntidad;
     private JTextField campoCapital;
     private JTextField campoPoblacion;
@@ -22,12 +26,14 @@ public class Formulario extends JFrame {
 
     private JTextArea salida;
 
-    /**
-     * Constructor que inicializa la ventana del formulario, configurando
-     * los campos y botones.
-     */
+/**
+* Constructor que inicializa la ventana del formulario, configurando
+* los campos y botones.
 
-    // Presupuesto fijo para todas las entidades
+*/
+
+// Presupuesto fijo para todas las entidades
+
     private final double PRESUPUESTO_ASIGNADO = 10_000_000_000.0;
 
     public Formulario() {
@@ -37,9 +43,10 @@ public class Formulario extends JFrame {
 
         JPanel panelSuperior = new JPanel(new GridLayout(3, 1, 15, 15));
 
-        // =======================================
-        // SECCIÓN 1: DATOS PERSONALES (ACTUALIZADA)
-        // =======================================
+// =======================================
+// SECCIÓN 1: DATOS PERSONALES (ACTUALIZADA)
+// =======================================
+
         JPanel panelPersonales = new JPanel(new GridLayout(3, 2, 10, 10));
         panelPersonales.setBorder(BorderFactory.createTitledBorder("Datos Personales"));
 
@@ -55,9 +62,10 @@ public class Formulario extends JFrame {
         campoCorreo = new JTextField();
         panelPersonales.add(campoCorreo);
 
-        // =======================================
-        // SECCIÓN 2: ENTIDAD
-        // =======================================
+// =======================================
+// SECCIÓN 2: ENTIDAD
+// =======================================
+
         JPanel panelEntidad = new JPanel(new GridLayout(4, 2, 10, 10));
         panelEntidad.setBorder(BorderFactory.createTitledBorder("Entidad Elegible"));
 
@@ -84,9 +92,10 @@ public class Formulario extends JFrame {
 
         add(panelSuperior, BorderLayout.NORTH);
 
-        // =======================================
-        // BOTONES
-        // =======================================
+// =======================================
+// BOTONES
+// =======================================
+
         JPanel panelBotones = new JPanel();
         JButton botonProcesar = new JButton("Procesar");
         JButton botonEnviar = new JButton("Enviar Formulario");
@@ -98,9 +107,10 @@ public class Formulario extends JFrame {
 
         add(panelBotones, BorderLayout.CENTER);
 
-        // =======================================
-        // SALIDA
-        // =======================================
+// =======================================
+// SALIDA
+// =======================================
+
         salida = new JTextArea(15, 50);
         salida.setEditable(false);
         add(new JScrollPane(salida), BorderLayout.SOUTH);
@@ -119,9 +129,7 @@ public class Formulario extends JFrame {
      * Procesa los datos ingresados por el usuario, realiza las validaciones
      * y muestra los resultados en la interfaz.
      */
-    // =======================================
-    // PROCESAR DATOS (actualizado con correo)
-    // =======================================
+     
     private void procesarDatos() {
         try {
             String nombre = campoNombre.getText();
@@ -179,12 +187,13 @@ public class Formulario extends JFrame {
         }
     }
 
-               /**
+/**
      * Obtiene las sugerencias personalizadas para cada entidad.
      * 
      * @param entidad El nombre de la entidad seleccionada.
      * @return Las sugerencias correspondientes a la entidad.
-     */
+*/
+    
     private String obtenerSugerencia(String entidad) {
         switch (entidad) {
             case "SENA":
@@ -198,7 +207,7 @@ public class Formulario extends JFrame {
         }
     }
 
-        /**
+/**
      * Limpia todos los campos del formulario.
      */
     
@@ -211,11 +220,12 @@ public class Formulario extends JFrame {
         campoEventos.setText("");
         salida.setText("");
     }
-     /**
+/**
      * Método principal que ejecuta la aplicación.
      * 
      * @param args Argumentos de línea de comandos.
-     */
+         */
+    
     public static void main(String[] args) {
         new Formulario();
     }
