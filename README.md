@@ -1,9 +1,15 @@
 # Proyecto Final Programacion Orientada a Objetos
 
 # FORMULARIO DE PROYECTOS BANCO DE PROYECTOS - EVENTOS
+# Integrantes:
+- Bayron Santisteban Correa
+- Kevin Daniel Diaz Arciniegas
+- Nicolas Andrey Riveros Ordoñez
 
-    import javax.swing.*;
-    import java.awt.*;
+# Codigo y documentacion en javadocs.
+
+        import javax.swing.*;
+        import java.awt.*;
 
  * Clase que representa un formulario para la evaluación de propuestas
  * para diferentes entidades, recopilando datos personales y de entidad.
